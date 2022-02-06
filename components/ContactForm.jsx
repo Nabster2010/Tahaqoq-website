@@ -7,6 +7,7 @@ const ContactForm = () => {
   const { translation: data } = useTranslation();
   const [state, handleSubmit] = useForm("mdobeynn");
   if (state.succeeded) {
+    state.reset();
     alert("Thanks for your message!");
   }
 
