@@ -1,9 +1,14 @@
 import Image from "next/image";
+import { useForm, ValidationError } from "@formspree/react";
+import { useState } from "react";
 import { useTranslation } from "../hooks/useTranslation";
 
 const ContactForm = () => {
   const { locale, dir, lang, translation: data } = useTranslation();
-
+  const [state, handleSubmit] = useForm("mdobeynn");
+  if (state.succeeded) {
+    return <p>Thanks for joining!</p>;
+  }
   return (
     <section>
       <div className="  mx-auto grid grid-cols-1 gap-8 px-8 py-16 text-gray-900 md:grid-cols-2 md:px-12 lg:px-16  xl:px-32 ">
@@ -23,38 +28,76 @@ const ContactForm = () => {
             />
           </div>
         </div>
-        <div className="" data-aos="fade-up">
+        <form onSubmit={handleSubmit} className="" data-aos="fade-up">
           <div>
-            <span className="text-sm font-bold uppercase text-gray-600">
+            <label
+              htmlFor="name"
+              className="text-sm font-bold uppercase text-gray-600"
+            >
               {data.contactForm.fullname}
-            </span>
+            </label>
             <input
               className="focus:shadow-outline mt-2 w-full rounded-lg bg-gray-100 p-3 text-gray-900 focus:outline-none"
               type="text"
+              name="name"
+              id="name"
+              required
+              autoComplete="name"
               placeholder=""
             />
+            <ValidationError prefix="Name" field="name" errors={state.errors} />
           </div>
           <div className="mt-8">
-            <span className="text-sm font-bold uppercase text-gray-600">
+            <label
+              htmlFor="email"
+              className="text-sm font-bold uppercase text-gray-600"
+            >
               {data.contactForm.email}
-            </span>
+            </label>
             <input
               className="focus:shadow-outline mt-2 w-full rounded-lg bg-gray-100 p-3 text-gray-900 focus:outline-none"
-              type="text"
+              type="email"
+              name="email"
+              id="email"
+              required
+              autoComplete="email"
+              placeholder=""
+            />
+            <ValidationError
+              prefix="Email"
+              field="email"
+              errors={state.errors}
             />
           </div>
           <div className="mt-8">
-            <span className="text-sm font-bold uppercase text-gray-600">
+            <label
+              htmlFor="message"
+              className="text-sm font-bold uppercase text-gray-600"
+            >
               {data.contactForm.message}
-            </span>
-            <textarea className="focus:shadow-outline mt-2 h-32 w-full rounded-lg bg-gray-100 p-3 text-gray-900 focus:outline-none"></textarea>
+            </label>
+            <textarea
+              name="message"
+              id="message"
+              required
+              className="focus:shadow-outline mt-2 h-32 w-full rounded-lg bg-gray-100 p-3 text-gray-900 focus:outline-none"
+            ></textarea>
+            <ValidationError
+              prefix="Message"
+              field="message"
+              errors={state.errors}
+            />
           </div>
           <div className="mt-8">
-            <button className="focus:shadow-outline bg-primary w-full rounded-lg p-3 text-sm font-bold uppercase tracking-wide text-black focus:outline-none">
+            <button
+              type="submit"
+              disabled={state.submitting}
+              className="focus:shadow-outline bg-primary w-full rounded-lg p-3 text-sm font-bold uppercase tracking-wide text-black focus:outline-none"
+            >
               {data.contactForm.btnText}
             </button>
           </div>
-        </div>
+        </form>
       </div>
     </section>
   );
