@@ -8,7 +8,7 @@ const Services = () => {
       className=" relative "
       data-aos="fade-in"
       style={{
-        background: `url("/assets/img/services-bg.jpg") no-repeat  center fixed`,
+        background: `url("/assets/img/services/services-bg.jpg") no-repeat  center fixed`,
       }}
     >
       <div className="absolute inset-0 bg-gray-100/90 "></div>

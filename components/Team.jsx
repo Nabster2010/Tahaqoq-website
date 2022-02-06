@@ -21,7 +21,7 @@ const Team = () => {
                 width="100%"
                 height="100%"
                 alt="..."
-                src={"/assets/img/team-1-800x800.jpg"}
+                src={"/assets/img/team/team-1-800x800.jpg"}
                 className="mx-auto max-w-full rounded-full shadow-lg"
                 style={{ maxWidth: "120px" }}
               />
@@ -59,7 +59,7 @@ const Team = () => {
                 width="100%"
                 height="100%"
                 alt="..."
-                src={"/assets/img/team-2-800x800.jpg"}
+                src={"/assets/img/team/team-2-800x800.jpg"}
                 className="mx-auto max-w-full rounded-full shadow-lg"
                 style={{ maxWidth: "120px" }}
               />
@@ -91,7 +91,7 @@ const Team = () => {
                 width="100%"
                 height="100%"
                 alt="..."
-                src={"/assets/img/team-3-800x800.jpg"}
+                src={"/assets/img/team/team-3-800x800.jpg"}
                 className="mx-auto max-w-full rounded-full shadow-lg"
                 style={{ maxWidth: "120px" }}
               />

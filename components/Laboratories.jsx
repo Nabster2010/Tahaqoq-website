@@ -11,7 +11,7 @@ const Laboratories = () => {
       className="relative px-8 pb-16"
       data-aos="fade-up"
       style={{
-        background: `url("/assets/img/lab-bg.jpg") no-repeat  fixed`,
+        background: `url("/assets/img/laboratories/lab-bg.jpg") no-repeat  fixed`,
       }}
     >
       <div className="absolute inset-0 bg-gray-100/90 "></div>
