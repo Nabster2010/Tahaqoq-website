@@ -1,15 +1,15 @@
 const data = {
   nav: [
-    { id: 1, name: "الرئيسية", link: "/" },
+    { id: 1, name: "الرئيسية", link: "#hero" },
     {
       id: 2,
       name: "خدماتنا",
-      link: "/Services",
+      link: "#services",
     },
-    { id: 3, name: "المختبرات", link: "/Laboratories" },
-    { id: 4, name: "الاعتمادات", link: "/Accreditions" },
-    { id: 5, name: "الوظائف", link: "/Careers" },
-    { id: 6, name: " اتصل بنا", link: "/Contact Us" },
+    { id: 3, name: "المختبرات", link: "#laboratories" },
+    { id: 4, name: "الاعتمادات", link: "#accredition" },
+    { id: 5, name: "الوظائف", link: "#" },
+    { id: 6, name: " اتصل بنا", link: "#contact" },
   ],
   hero: [
     {

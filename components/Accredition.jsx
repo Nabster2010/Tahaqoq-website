@@ -15,7 +15,7 @@ const Accreditions = () => {
     (card) => card.id === openTab
   ).images;
   return (
-    <section id="Accreditions" className="bg-gray-100 ">
+    <section id="accredition" className="bg-gray-100 ">
       <header className=" text-center">
         <Divider title={data.accreditations.title} animation="fade-up" />
       </header>

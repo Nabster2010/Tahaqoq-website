@@ -33,7 +33,7 @@ export default function Navbar() {
     <nav
       className={`${
         navTransparent ? "bg-opacity-0 " : "bg-opacity-90"
-      } fixed top-0 left-0 right-0  z-50 flex flex-wrap items-center  justify-between bg-black px-2 py-3 transition  duration-500 ease-in-out`}
+      } fixed top-0 left-0 right-0  z-50 flex flex-wrap items-center  justify-between bg-black px-2 py-3 transition duration-500  ease-in-out lg:py-0`}
     >
       <div className="mx-8 flex  w-full flex-wrap items-center justify-between">
         <div className="relative flex w-full justify-between text-white lg:static lg:block lg:w-auto lg:justify-start">
@@ -64,7 +64,7 @@ export default function Navbar() {
           }
           id="example-navbar-warning"
         >
-          <ul className="mb-2 flex list-none flex-col lg:flex-row ">
+          <ul className=" flex list-none flex-col lg:flex-row ">
             {data?.nav.map((item) => (
               <li
                 key={item.id}

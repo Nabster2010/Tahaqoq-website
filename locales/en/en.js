@@ -1,15 +1,15 @@
 const data = {
   nav: [
-    { id: 1, name: "Home", link: "/" },
+    { id: 1, name: "Home", link: "#hero" },
     {
       id: 2,
       name: "Services",
-      link: "/Services",
+      link: "#services",
     },
-    { id: 3, name: "Laboratories", link: "/Laboratories" },
-    { id: 4, name: "Accreditions", link: "/Accreditions" },
-    { id: 5, name: "Careers", link: "/Careers" },
-    { id: 6, name: "Contact Us", link: "/Contact Us" },
+    { id: 3, name: "Laboratories", link: "#laboratories" },
+    { id: 4, name: "Accreditions", link: "#accredition" },
+    { id: 5, name: "Careers", link: "#" },
+    { id: 6, name: "Contact Us", link: "#contact" },
   ],
   hero: [
     {

@@ -8,6 +8,7 @@ const Laboratories = () => {
 
   return (
     <section
+      id="laboratories"
       className="relative px-8 pb-16"
       data-aos="fade-up"
       style={{
