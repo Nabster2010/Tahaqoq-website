@@ -1,8 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { useTranslation } from "../hooks/useTranslation";
-const FORM_ENDPOINT =
-  "https://getform.io/f/ca10fae8-332c-4230-93ad-7b62ba7c9f4d";
+
 const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [query, setQuery] = useState({
@@ -27,12 +26,13 @@ const ContactForm = () => {
     Object.entries(query).forEach(([key, value]) => {
       formData.append(key, value);
     });
-    fetch(`${FORM_ENDPOINT}`, {
+    fetch(`${process.env.NEXT_PUBLIC_FORM_ENDPOINT}`, {
       method: "POST",
       body: formData,
     })
       .then(() => setQuery({ name: "", email: "", message: "" }))
       .then(() => alert("Message sent successfully"))
+      .catch(() => alert("Error"))
       .finally(() => setIsSubmitting(false));
   };
   const { translation: data } = useTranslation();
