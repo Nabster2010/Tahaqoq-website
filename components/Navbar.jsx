@@ -35,7 +35,7 @@ export default function Navbar() {
         navTransparent ? "bg-opacity-0 " : "bg-opacity-90"
       } fixed top-0 left-0 right-0  z-50 flex flex-wrap items-center  justify-between bg-black px-2 py-3 transition duration-500  ease-in-out lg:py-0`}
     >
-      <div className="mx-8 flex  w-full flex-wrap items-center justify-between">
+      <div className="mx-2 flex w-full  flex-wrap items-center justify-between md:mx-8">
         <div className="relative flex w-full justify-between text-white lg:static lg:block lg:w-auto lg:justify-start">
           <a
             className={

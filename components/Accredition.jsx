@@ -19,7 +19,7 @@ const Accreditions = () => {
       <header className=" text-center text-black">
         <Divider title={data.accreditations.title} animation="fade-up" />
       </header>
-      <div className="mx-8 pt-8 pb-16">
+      <div className="mx-4 pt-8 pb-16 md:mx-8">
         <div
           className="flex items-center justify-center gap-2"
           data-aos="fade-up"
@@ -32,7 +32,7 @@ const Accreditions = () => {
                 setOpenTab(card.id);
               }}
               className={
-                " rounded-md bg-white py-3 px-5   text-sm text-black transition " +
+                " rounded-md bg-white py-3 px-8  text-sm text-black transition " +
                 (openTab === card.id
                   ? "bg-primary text-white"
                   : "bg-white text-black")

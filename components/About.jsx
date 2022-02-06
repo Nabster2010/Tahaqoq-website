@@ -8,7 +8,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative px-8"
+      className="relative px-4 md:px-8"
       style={{
         background: `url(${data.about.background}) no-repeat top center fixed`,
       }}

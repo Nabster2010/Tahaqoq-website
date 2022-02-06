@@ -9,7 +9,7 @@ const Clients = () => {
   const { locale, dir, lang, translation: data } = useTranslation();
 
   return (
-    <section id="clients" className="mx-8 bg-white pb-16">
+    <section id="clients" className="mx-4 bg-white pb-16 md:mx-8">
       <div data-aos="zoom-in">
         <header className=" text-center">
           <Divider title={data.parteners.title} animation="zoom-in" />

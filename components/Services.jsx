@@ -13,7 +13,7 @@ const Services = () => {
       }}
     >
       <div className="absolute inset-0 bg-gray-100/90 "></div>
-      <div className="mx-8 pb-16">
+      <div className="mx-2 pb-16 md:mx-8">
         <Divider title={data.services.title} animation="fade-up" />
 
         <div className=" mx-auto ">

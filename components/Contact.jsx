@@ -7,7 +7,7 @@ const Contact = () => {
 
   return (
     <section id="contact ">
-      <div className="mx-8 bg-white">
+      <div className="mx-4 bg-white md:mx-8">
         <header className=" text-center text-black">
           <Divider title={data.contact.title} animation="fade-up" />
 

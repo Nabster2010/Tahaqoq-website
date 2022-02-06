@@ -39,7 +39,7 @@ const ContactForm = () => {
 
   return (
     <section className="bg-white">
-      <div className="  mx-auto grid grid-cols-1 gap-8 px-8 py-16 text-gray-900 md:grid-cols-2 md:px-12 lg:px-16  xl:px-32 ">
+      <div className="  mx-auto grid grid-cols-1 gap-8 px-4 py-16 text-gray-900 md:grid-cols-2  md:px-12 lg:px-16  xl:px-32 ">
         <div className="flex flex-col justify-between" data-aos="fade-up">
           <div>
             <h2 className="text-4xl font-bold leading-tight lg:text-5xl">

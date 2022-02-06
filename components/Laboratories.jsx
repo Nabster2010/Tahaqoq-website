@@ -9,7 +9,7 @@ const Laboratories = () => {
   return (
     <section
       id="laboratories"
-      className="relative px-8 pb-16"
+      className="relative px-4 pb-16 md:px-8"
       data-aos="fade-up"
       style={{
         background: `url("/assets/img/laboratories/lab-bg.jpg") no-repeat  fixed`,
@@ -40,7 +40,7 @@ const Tabs = ({ color, data }) => {
             role="tablist"
           >
             {data.laboratories.tabs.map((tab) => (
-              <li key={tab.id} className="my-1 mx-2 flex-auto text-center ">
+              <li key={tab.id} className="my-1 mx-1 flex-auto text-center ">
                 <a
                   className={
                     "block rounded px-3 py-3 text-xs font-bold uppercase leading-normal shadow-lg " +
