@@ -1,14 +1,41 @@
 import Image from "next/image";
-import { useForm, ValidationError } from "@formspree/react";
 import { useState } from "react";
 import { useTranslation } from "../hooks/useTranslation";
-
+const FORM_ENDPOINT =
+  "https://getform.io/f/ca10fae8-332c-4230-93ad-7b62ba7c9f4d";
 const ContactForm = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [query, setQuery] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  // Update inputs value
+  const handleParam = () => (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setQuery((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+  // Form Submit function
+  const formSubmit = (e) => {
+    setIsSubmitting(true);
+    e.preventDefault();
+    const formData = new FormData();
+    Object.entries(query).forEach(([key, value]) => {
+      formData.append(key, value);
+    });
+    fetch(`${FORM_ENDPOINT}`, {
+      method: "POST",
+      body: formData,
+    })
+      .then(() => setQuery({ name: "", email: "", message: "" }))
+      .then(() => alert("Message sent successfully"))
+      .finally(() => setIsSubmitting(false));
+  };
   const { translation: data } = useTranslation();
-  const [state, handleSubmit] = useForm("mdobeynn");
-  if (state.succeeded) {
-    alert("Thanks for your message!");
-  }
 
   return (
     <section>
@@ -29,7 +56,7 @@ const ContactForm = () => {
             />
           </div>
         </div>
-        <form onSubmit={handleSubmit} className="" data-aos="fade-up">
+        <form onSubmit={formSubmit} className="" data-aos="fade-up">
           <div>
             <label
               htmlFor="name"
@@ -45,8 +72,9 @@ const ContactForm = () => {
               required
               autoComplete="name"
               placeholder=""
+              value={query.name}
+              onChange={handleParam()}
             />
-            <ValidationError prefix="Name" field="name" errors={state.errors} />
           </div>
           <div className="mt-8">
             <label
@@ -63,11 +91,8 @@ const ContactForm = () => {
               required
               autoComplete="email"
               placeholder=""
-            />
-            <ValidationError
-              prefix="Email"
-              field="email"
-              errors={state.errors}
+              value={query.email}
+              onChange={handleParam()}
             />
           </div>
           <div className="mt-8">
@@ -79,21 +104,18 @@ const ContactForm = () => {
             </label>
             <textarea
               name="message"
+              value={query.message}
+              onChange={handleParam()}
               id="message"
               required
               className="focus:shadow-outline mt-2 h-32 w-full rounded-lg bg-gray-100 p-3 text-gray-900 focus:outline-none"
             ></textarea>
-            <ValidationError
-              prefix="Message"
-              field="message"
-              errors={state.errors}
-            />
           </div>
           <div className="mt-8">
             <button
               type="submit"
-              disabled={state.submitting}
-              className="focus:shadow-outline bg-primary w-full rounded-lg p-3 text-sm font-bold uppercase tracking-wide text-black focus:outline-none"
+              disabled={isSubmitting}
+              className="focus:shadow-outline bg-primary w-full rounded-lg p-3 text-sm font-bold uppercase tracking-wide text-black focus:outline-none disabled:cursor-not-allowed disabled:text-gray-400"
             >
               {data.contactForm.btnText}
             </button>
