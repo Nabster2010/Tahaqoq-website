@@ -1,4 +1,3 @@
-import { ThemeProvider } from "next-themes";
 import { useEffect } from "react";
 import Layout from "../components/Layout";
 import { useTranslation } from "../hooks/useTranslation";
@@ -27,11 +26,9 @@ function MyApp({ Component, pageProps }) {
   }, []);
   return (
     <>
-      <ThemeProvider attribute="class">
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </ThemeProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 }
