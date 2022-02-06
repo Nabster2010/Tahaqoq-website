@@ -15,7 +15,7 @@ const About = () => {
     >
       <div className="absolute inset-0 bg-gray-100/90 "></div>
       <div className="relative  mx-auto ">
-        <header className=" text-center" data-aos="zoom-in">
+        <header className=" text-center text-black" data-aos="zoom-in">
           <Divider title={data.about.title} animation="zoom-in" />
           <p>{data.about.desc}</p>
         </header>
@@ -24,7 +24,7 @@ const About = () => {
             <div
               data-aos="fade-up"
               key={item.id}
-              className=" mb-6  rounded-md bg-white text-center shadow-md  "
+              className=" mb-6  rounded-md bg-white text-center text-black shadow-md  "
             >
               <div className="relative w-full ">
                 <Image
@@ -42,10 +42,10 @@ const About = () => {
                   ></i>
                 </div>
               </div>
-              <h2 className=" pb-4 pt-10  text-2xl font-bold">
+              <h2 className="pb-4 pt-10 text-2xl  font-bold text-black">
                 <a href="#">{item.title}</a>
               </h2>
-              <p className="p-4">{item.desc}</p>
+              <p className=" p-4 text-black">{item.desc}</p>
             </div>
           ))}
         </div>

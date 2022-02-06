@@ -83,7 +83,7 @@ export default function Navbar() {
             {locale === "ar" ? (
               <Link href={asPath} locale="en-US" passHref>
                 <li className="hover:border-primary mx-2 my-2 flex cursor-pointer items-center rounded-md border-l-8 border-transparent transition ease-in-out   hover:bg-gray-200   lg:hover:border-transparent lg:hover:bg-transparent">
-                  <div className="flex border-gray-200 py-2 px-3 text-gray-700 dark:border-gray-700  dark:text-gray-400 dark:hover:text-white  md:border-0   lg:hover:bg-transparent lg:dark:hover:bg-transparent lg:dark:hover:text-white">
+                  <div className="flex border-gray-200 py-2 px-3 text-gray-700    md:border-0   lg:hover:bg-transparent  ">
                     <Image
                       src={EnFlag}
                       width={30}
@@ -97,7 +97,7 @@ export default function Navbar() {
             ) : (
               <Link href={asPath} locale="ar" passHref>
                 <li className="hover:border-primary mx-2 my-2 flex cursor-pointer items-center rounded-md border-l-8 border-transparent transition ease-in-out   hover:bg-gray-200   lg:hover:border-transparent lg:hover:bg-transparent">
-                  <div className="flex border-gray-200 py-2 px-3 text-gray-700 dark:border-gray-700  dark:text-gray-400 dark:hover:text-white  md:border-0   lg:hover:bg-transparent lg:dark:hover:bg-transparent lg:dark:hover:text-white">
+                  <div className="flex border-gray-200 py-2 px-3 text-gray-700   md:border-0   lg:hover:bg-transparent ">
                     <Image
                       src={ArFlag}
                       width={30}

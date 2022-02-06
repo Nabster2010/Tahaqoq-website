@@ -10,7 +10,7 @@ class MyDocument extends Document {
     const dir = this.props.locale === "ar" ? "rtl" : "ltr";
     const lang = this.props.locale === "ar" ? "ar" : "en";
     return (
-      <Html>
+      <Html className="light">
         <Head>
           <link
             rel="stylesheet"

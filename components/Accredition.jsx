@@ -16,7 +16,7 @@ const Accreditions = () => {
   ).images;
   return (
     <section id="accredition" className="bg-gray-100 ">
-      <header className=" text-center">
+      <header className=" text-center text-black">
         <Divider title={data.accreditations.title} animation="fade-up" />
       </header>
       <div className="mx-8 pt-8 pb-16">
@@ -42,7 +42,7 @@ const Accreditions = () => {
             </button>
           ))}
         </div>
-        <div className="content my-4 text-center" data-aos="fade-up">
+        <div className="content my-4 text-center text-black" data-aos="fade-up">
           <div>
             <h1 className="pb-8 text-xl font-bold">
               {data.accreditations.cards[openTab - 1].title}

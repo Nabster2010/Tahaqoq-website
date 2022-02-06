@@ -6,12 +6,14 @@ const Contact = () => {
   const { locale, dir, lang, translation: data } = useTranslation();
 
   return (
-    <section id="contact">
-      <div className="mx-8">
-        <header className=" text-center">
+    <section id="contact ">
+      <div className="mx-8 bg-white">
+        <header className=" text-center text-black">
           <Divider title={data.contact.title} animation="fade-up" />
 
-          <p data-aos="fade-up">{data.contact.desc}</p>
+          <p data-aos="fade-up" className="text-black">
+            {data.contact.desc}
+          </p>
         </header>
 
         <div className="my-8 flex flex-col items-center justify-center  text-center md:flex-row">
@@ -22,7 +24,7 @@ const Contact = () => {
                 <h3 className="text-xl font-bold uppercase text-gray-400">
                   {item.title}
                 </h3>
-                <address>{item.text}</address>
+                <address className="text-black">{item.text}</address>
               </div>
             </div>
           ))}

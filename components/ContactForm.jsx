@@ -38,7 +38,7 @@ const ContactForm = () => {
   const { translation: data } = useTranslation();
 
   return (
-    <section>
+    <section className="bg-white">
       <div className="  mx-auto grid grid-cols-1 gap-8 px-8 py-16 text-gray-900 md:grid-cols-2 md:px-12 lg:px-16  xl:px-32 ">
         <div className="flex flex-col justify-between" data-aos="fade-up">
           <div>
